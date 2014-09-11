@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 feature "User adds a new link" do
+
 	scenario "when browsing the homepage" do
 		expect(Link.count).to eq(0)
 		visit '/'
@@ -19,10 +20,9 @@ feature "User adds a new link" do
 		link = Link.first
 		expect(link.tags.map(&:text)).to include("education")
 		expect(link.tags.map(&:text)).to include("ruby")
-
 	end
 
-	def add_link(url, title, tags)
+	def add_link(url, title, tags = [])
 		within('#new-link') do
 			fill_in 'url', :with => url
 			fill_in 'title', :with => title
@@ -30,4 +30,5 @@ feature "User adds a new link" do
 			click_button 'Add link'
 		end
 	end
+	
 end
