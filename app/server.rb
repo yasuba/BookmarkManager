@@ -19,10 +19,3 @@ require_relative 'controllers/application'
 	use Rack::Flash
 	set :partial_template_engine, :erb
 
-	helpers do
-
-		def current_user
-			@current_user ||=User.get(session[:user_id])if session[:user_id]
-		end
-
-	end
