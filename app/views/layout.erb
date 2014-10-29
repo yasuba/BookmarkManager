@@ -2,10 +2,16 @@
 <html>
 <head>
 	<title>Bookmark Manager</title>
+  <link rel="stylesheet" type="text/css" href="/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/css/application.css">
 </head>
+
 <body>
-	<%= partial :welcome_message %>
+<header>
+<div id="logo">Bookmark Manager</div>
+	<%= partial :header%>
 	<%= partial :flash %>
+  </header>
 	<%= yield %>
 </body>
 </html>

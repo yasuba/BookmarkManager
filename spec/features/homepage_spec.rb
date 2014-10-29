@@ -12,13 +12,12 @@ feature 'viewing the homepage' do
   end
 
   scenario 'as a signed-in user' do
-    visit '/'
-    click_link "Sign in"
-    fill_in 'email', :with => "test@test.com"
-    fill_in 'password', :with => "1234"
-    click_button 'Sign in'
-    expect(page).not_to have_link("Sign in")
-    expect(page).not_to have_link("Sign up")
+    User.create(:email => "test@test.com",
+          :password => 'test',
+          :password_confirmation => 'test')
+    sign_in("test@test.com", "test")
+    expect(page).not_to have_content("Sign in")
+    expect(page).not_to have_content("Sign up")
   end
 
 end
