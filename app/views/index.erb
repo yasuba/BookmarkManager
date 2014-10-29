@@ -1,3 +1,15 @@
+<% if current_user %>
+  Welcome, <%= current_user.email %>
+  <form method="post" action="/sessions">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Sign out">
+  </form>
+
+<% else %>
+  <a href="/sessions/new">Sign in</a>
+  <a href="/users/new">Sign up</a>
+<% end%>
+
 <h1>Welcome to the bookmark manager</h1>
 
 Current links:

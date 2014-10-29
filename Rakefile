@@ -4,7 +4,7 @@ require './app/data_mapper_setup'
 task :auto_upgrade do
 
 	DataMapper.auto_upgrade!
-	puts "Auto-upgrade complete (no data loss"
+	puts "Auto-upgrade complete (no data loss)"
 end
 
 task :auto_migrate do

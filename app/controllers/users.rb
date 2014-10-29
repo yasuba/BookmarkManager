@@ -4,7 +4,7 @@ get '/users/new' do
 end
 
 post '/users' do
-	@user = User.create(:email => params[:email],
+	@user = User.new(:email => params[:email],
 				:password => params[:password],
 				:password_confirmation => params[:password_confirmation])
 	if @user.save
@@ -15,3 +15,26 @@ post '/users' do
 		erb :"users/new"
 	end
 end
+
+get'/users/password-reminder' do
+	erb :"users/password_reminder"
+end
+
+post'/users/password-reminder' do
+	user = User.first(:email => email)
+	user.password_token = (1..64).map{('A'..'Z').to_a.sample}.join
+	user.password_token_timestamp = Time.now
+	user.save
+end
+
+get '/users/reset_password/:token' do
+	user = User.first(:password_token => token)
+	if user.password_token_timestamp <= (Time.now + 60)
+		erb :"users/password_reset"
+	end
+end
+
+post 'users/password-reset' do
+
+end
+

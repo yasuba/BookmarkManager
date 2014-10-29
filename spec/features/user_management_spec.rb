@@ -64,4 +64,11 @@ feature "User signs up" do
 		expect(page).to have_content("This email is already taken")
 	end
 
+	# feature "User forgets password" do
+	# 	visit '/'
+
+
+
+	# end
+
 end
