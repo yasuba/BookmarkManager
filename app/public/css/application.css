@@ -1,11 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   background-image: url(/images/seamless_paper_texture.png);
+  color: #333;
 }
 
-a.button {
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -110px;
+}
+
+a {
+  text-decoration: none;
+  color: #b77843;
+}
+
+.button {
   display: inline-block;
-  width: 80px;
+  width: 110px;
   background-color: #82B743;
   border: 2px solid #fff;
   color: #fff;
@@ -16,9 +37,11 @@ a.button {
   margin-left: 5px;
   margin-right: 5px;
   text-shadow: 0 0 2px rgba(0,0,0, 0.4);
+  font-size: 16px;
+  cursor: pointer;
 }
 
-a.button.highlighted {
+.button.highlighted {
   background-color: #b77843;
 }
 
@@ -38,14 +61,8 @@ header #logo {
   display: flex;
 }
 
-header #logo a {
+header a {
   color: #fff;
-  text-decoration: none;
-}
-
-header #logo a:visited {
-  color: #fff;
-  text-decoration: none;
 }
 
 header #user-links {
@@ -54,7 +71,15 @@ header #user-links {
   text-align: right;
 }
 
-#links-container {
+header #user-links > * {
+  display: inline-block;
+}
+
+header #user-links #welcome-message {
+  font-size: 14px;
+}
+
+#container {
   background-color: #fff;
   margin: 40px;
   box-shadow: 0 0 5px rgba(0,0,0, 0.4);
@@ -81,9 +106,44 @@ header #user-links {
   font-size: 12px;
 }
 
+.flash {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0,0,0, 0.4);
+  color: #fff;
+}
+
+.flash-notice {
+  background-color: rgba(67,183,120, 0.75);
+}
+.flash.error {
+  background-color: rgba(169,29,42, 0.75);
+}
+
+h1 {
+  font-size: 22px;
+}
+
+form{
+  text-align: left;
+}
+
+form p {
+  margin: 10px 0;
+}
+
+form input[type="text"], form input[type="password"] {
+  border: 1px solid #000;
+  font-size: 16px;
+  width: 400px;
+}
+
 footer {
   display: flex;
   background-color: rgba(0,0,0, 0.2);
+  height: 70px;
 }
 
 footer > * {

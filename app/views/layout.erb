@@ -7,15 +7,16 @@
 </head>
 
 <body>
-  <header>
-    <div id="logo">
-      <a href="/">Bookmark Manager</a>
-    </div>
-	  <%= partial :flash %>
+  <div class="wrapper">
     <%= partial :header %>
-  </header>
-  <%= yield %>
-  <%= partial :footer %>
-
+    <%= partial :flash %>
+    <div id="container">
+      <%= yield %>
+    </div>
+    <div class="push"></div>
+  </div>
+  <div class="footer">
+      <%= partial :footer %>
+  </div>
 </body>
 </html>
