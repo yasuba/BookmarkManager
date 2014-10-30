@@ -16,7 +16,7 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -110px;
+  margin: 0 auto -70px;
 }
 
 a {
@@ -50,7 +50,7 @@ header {
   background-color: #000;
   color: #fff;
   display: flex;
-  padding: 0 5px;
+  padding: 0 20px;
 }
 
 header > * {
@@ -59,6 +59,7 @@ header > * {
 
 header #logo {
   display: flex;
+  margin-right: 20px;
 }
 
 header a {
@@ -84,6 +85,28 @@ header #user-links #welcome-message {
   margin: 40px;
   box-shadow: 0 0 5px rgba(0,0,0, 0.4);
   padding: 10px;
+}
+
+#container:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+#links {
+  width: 65%;
+  float: left;
+  margin-left: 10px;
+}
+
+#tags {
+  width: 30%;
+  float: left;
+  background-color: #EEE;
+  box-shadow: 0 0 5px rgba(0,0,0, 0.4);
+  margin: 10px 0 10px 40px;
+  padding: 15px 10px;
 }
 
 .link {
@@ -126,6 +149,11 @@ h1 {
   font-size: 22px;
 }
 
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
 form{
   text-align: left;
 }
@@ -144,6 +172,8 @@ footer {
   display: flex;
   background-color: rgba(0,0,0, 0.2);
   height: 70px;
+/*  position: relative;
+  z-index: 1;*/
 }
 
 footer > * {
@@ -157,8 +187,13 @@ footer img {
 footer #technologies {
   -webkit-flex: 1;
   flex: 1;
+  font-size: 12px;
 }
 
 footer p {
   padding: 5px 25px;
+}
+
+.footer, .push {
+  height: 70px;
 }

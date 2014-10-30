@@ -6,6 +6,7 @@ require_relative 'models/link'
 require_relative 'models/tag'
 require_relative 'models/user'
 require_relative 'helpers/application'
+require_relative 'helpers/link_to'
 require_relative 'data_mapper_setup'
 
 require_relative 'controllers/users'
