@@ -54,9 +54,16 @@ header #user-links {
   text-align: right;
 }
 
+#links-container {
+  background-color: #fff;
+  margin: 40px;
+  box-shadow: 0 0 5px rgba(0,0,0, 0.4);
+  padding: 10px;
+}
+
 .link {
   background-color: #EEE;
-  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  box-shadow: 0 0 5px rgba(0,0,0, 0.4);
   margin: 10px inherit;
   padding: 15px 10px;
 }
@@ -72,4 +79,26 @@ header #user-links {
 .link .source {
   float: right;
   font-size: 12px;
+}
+
+footer {
+  display: flex;
+  background-color: rgba(0,0,0, 0.2);
+}
+
+footer > * {
+  margin: auto inherit;
+}
+
+footer img {
+  vertical-align: top;
+}
+
+footer #technologies {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+footer p {
+  padding: 5px 25px;
 }

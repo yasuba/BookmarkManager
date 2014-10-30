@@ -7,11 +7,15 @@
 </head>
 
 <body>
-<header>
-<div id="logo"><a href="/">Bookmark Manager</a></div>
-	<%= partial :flash %>
-  <%= partial :header%>
+  <header>
+    <div id="logo">
+      <a href="/">Bookmark Manager</a>
+    </div>
+	  <%= partial :flash %>
+    <%= partial :header %>
   </header>
-	<%= yield %>
+  <%= yield %>
+  <%= partial :footer %>
+
 </body>
 </html>
