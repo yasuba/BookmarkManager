@@ -115,7 +115,7 @@ header #user-links #welcome-message {
   color: #fff;
 }
 
-.flash-notice {
+.flash.notice {
   background-color: rgba(67,183,120, 0.75);
 }
 .flash.error {
