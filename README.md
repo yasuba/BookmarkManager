@@ -8,7 +8,7 @@ The bookmark manager is able to:
 * Add new links
 * Add tags to the links
 * Filter links by a tag
-* Allow users to sign up for accounts, the sign out and in
+* Allow users to sign up for accounts, then sign out and in
 
 ##Technologies
 
@@ -21,6 +21,6 @@ The bookmark manager is able to:
 
 ##The application
 
-You can view the app here on heroku:
+You can view the app here on Heroku:
 
 https://dry-beyond-1337.herokuapp.com/
