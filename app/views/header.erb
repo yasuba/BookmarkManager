@@ -9,11 +9,11 @@
     <% if current_user %>
     <span id="welcome-message">
       Welcome, <%= current_user.email %>
-      </span>
-      <form id="sign-out" method="post" action="/sessions">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Sign out" class="button">
-      </form>
+    </span>
+    <form id="sign-out" method="post" action="/sessions">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Sign out" class="button">
+    </form>
 
     <% else %>
       <a href="/sessions/new" id="sign-in" class="button">Sign in</a>

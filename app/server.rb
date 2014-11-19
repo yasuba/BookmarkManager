@@ -15,8 +15,8 @@ require_relative 'controllers/links'
 require_relative 'controllers/tags'
 require_relative 'controllers/application'
 
-	enable :sessions
-	set :session_secret, 'super secret'
-	use Rack::Flash
-	set :partial_template_engine, :erb
+enable :sessions
+set :session_secret, 'super secret'
+use Rack::Flash
+set :partial_template_engine, :erb
 

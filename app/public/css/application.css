@@ -172,8 +172,6 @@ footer {
   display: flex;
   background-color: rgba(0,0,0, 0.2);
   height: 70px;
-/*  position: relative;
-  z-index: 1;*/
 }
 
 footer > * {

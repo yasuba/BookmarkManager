@@ -1,7 +1,7 @@
 <ul id="links">
-	<% @links.each do |link| %>
-	  <%= partial :link, :locals => {:link => link}  %>
-	<% end %>
+  <% @links.each do |link| %>
+    <%= partial :link, :locals => {:link => link}  %>
+  <% end %>
 </ul>
 
 <div id="tags">
@@ -10,7 +10,7 @@
     <% @links.each do |link| %>
       <% link.tags.each do |tag| %>
         <li><%= link_to "/tags/#{tag.text}","#{tag.text}" %></li>
-        <% end %>
+      <% end %>
     <% end %>
   </ul>
 </div>
